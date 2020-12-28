@@ -9,6 +9,8 @@ import { AdvisingFormComponent } from './components/advising-form/advising-form.
 import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedNewsComponent } from './components/featured-news/featured-news.component';
 import { CardCarouselComponent } from './components/card-carousel/card-carousel.component';
+import { FeaturedEventsComponent } from './components/featured-events/featured-events.component';
+import { QuickLinksComponent } from './components/quick-links/quick-links.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CardCarouselComponent } from './components/card-carousel/card-carousel.
     AdvisingFormComponent,
     FooterComponent,
     FeaturedNewsComponent,
-    CardCarouselComponent
+    CardCarouselComponent,
+    FeaturedEventsComponent,
+    QuickLinksComponent
   ],
   imports: [
     BrowserModule,
