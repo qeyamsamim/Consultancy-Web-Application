@@ -2,72 +2,32 @@
   <h3>Latest News</h3>
 </div>
 <div class="container-fluid">
-  <div class="row d-flex flex-row mx-0 my-row">
-    <div class="col-md-6 px-1">
+  <div class="row mx-0 d-flex flex-row my-row">
+    <div class="col-lg-6 col-md-12 px-1">
       <div class="card">
-        <img class="card-img-top flex-auto my-image" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <img class="card-img-top flex-auto my-image" src="../../../assets/images/news1.JPG" alt="Card image cap">
         <div class="card-body pt-1 pb-1">
-          <h4 class="card-title text-center mb-1">Card title</h4>
+          <h4 class="card-title mb-1 text-center">Card title</h4>
           <p class="card-text mb-1">
             This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content.
           </p>
           <div class="d-inline-block font-weight-bold"><a routerLink="/news-events">Continue Reading</a></div>
           <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
+          <div class="mt-2 mb-2 d-lg-none font-weight-bold text-center"><a routerLink="/news-events">View All</a></div>
         </div>
       </div>
     </div>
-    <div class="col-md-6 px-1">
-      <div class="row d-flex flex-row mx-0 mb-2">
-        <div class="col-md-6 col-sm-12 px-1">
+    <div class="col-md-6 px-1 d-none d-lg-block">
+      <div class="row mx-0 mb-3 d-flex flex-row">
+        <div class="col-md-6 col-sm-12 px-1 mb-1" *ngFor="let item of newsItems; let i = index;">
           <div class="card">
-            <img class="card-img-top flex-auto small-image" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            <img class="card-img-top flex-auto small-image" [src]="item.imageURL" [alt]="item.alt">
             <div class="card-body pt-1 pb-1">
-              <h5 class="card-title tex-center d-inline-block mb-1">Card title</h5>
-              <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
+              <h5 class="card-title mb-1 d-inline-block tex-center"> {{ item.title }} </h5>
+              <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
               <p class="card-text mb-1" style="font-size: 14px">
-                This is a wider card with supporting text below as a natural lead-in to additional.
-                <a class="font-weight-bold" routerLink="/news-events">Continue</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 px-1">
-          <div class="card">
-            <img class="card-img-top flex-auto small-image" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-            <div class="card-body pt-1 pb-1">
-              <h5 class="card-title tex-center d-inline-block mb-1">Card title</h5>
-              <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
-              <p class="card-text mb-1" style="font-size: 14px">
-                This is a wider card with supporting text below as a natural lead-in to additional.
-                <a class="font-weight-bold" routerLink="/news-events">Continue</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mx-0">
-        <div class="col-md-6 px-1">
-          <div class="card">
-            <img class="card-img-top flex-auto small-image" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-            <div class="card-body pt-1 pb-1">
-              <h5 class="card-title tex-center d-inline-block mb-1">Card title</h5>
-              <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
-              <p class="card-text mb-1" style="font-size: 14px">
-                This is a wider card with supporting text below as a natural lead-in to additional.
-                <a class="font-weight-bold" routerLink="/news-events">Continue</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 px-1">
-          <div class="card">
-            <img class="card-img-top flex-auto small-image" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-            <div class="card-body pt-1 pb-1">
-              <h5 class="card-title tex-center d-inline-block mb-1">Card title</h5>
-              <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
-              <p class="card-text mb-1" style="font-size: 14px">
-                This is a wider card with supporting text below as a natural lead-in to additional.
-                <a class="font-weight-bold" routerLink="/news-events">Continue</a>
+                {{ item.text }}
+                <a class="font-weight-bold" [routerLink]="item.url"> {{ item.button }} </a>
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light primary">
-  <a class="navbar-brand mb-0 h1 text-white " routerLink="/">Navbar</a>
+  <a class="navbar-brand mb-0 h1 text-white " routerLink="/">ConsultancyWebApp</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,34 +9,18 @@
       <!-- <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li> -->
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/library">Library</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/news-events">News & Events</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Classes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="/classes">TOEFL iBT</a>
-          <a class="dropdown-item" routerLink="/classes">GRE</a>
-          <a class="dropdown-item" routerLink="/classes">SAT</a>
-          <a class="dropdown-item" routerLink="/classes">Academic English</a>
+          <li *ngFor="let item of dropdownItem; let i = index">
+            <a class="dropdown-item" [routerLink]="item.uRL"> {{ item.title }} </a>
+          </li>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/toefl-ibt">TOEFL iBT Test</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/services">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/contact">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/about">About</a>
+      <li class="nav-item" *ngFor="let item of navItem; let i = index">
+        <a class="nav-link text-white" [routerLink]="item.uRL"> {{ item.title }} </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

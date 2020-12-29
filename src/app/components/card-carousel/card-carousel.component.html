@@ -2,6 +2,7 @@
 <div class="row pb-3 pt-4 justify-content-center">
   <h3>Success Stories</h3>
 </div>
+
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-interval="false" data-ride="carousel">
 
   <a class="carousel-control-prev" href="#multi-item-example" data-slide="prev">
@@ -10,62 +11,22 @@
   <a class="carousel-control-next" href="#multi-item-example" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
-  <!--/.Indicators-->
 
   <!--Slides-->
   <div class="carousel-inner" role="listbox">
-
     <!--First slide-->
     <div class="carousel-item active">
-
-      <div class="col-md-3" style="float:left">
+      <div class="col-md-3 col-sm-6" style="float:left" *ngFor="let item of storyItems">
        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk.</p>
-            <a class="btn btn-primary">Button</a>
+          <img class="card-img-top mb-0" [src]="item.imageURL" [alt]="item.alt">
+          <div class="card-body pt-1">
+            <h4 class="card-title mb-0 d-inline-block"> {{ item.name }} </h4>
+            <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
+            <p class="card-text mb-1"> {{ item.content }} </p>
+            <a class="btn btn-primary" [routerLink]="item.url"> {{ item.viewMore }} </a>
           </div>
         </div>
       </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-md-3" style="float:left">
-       <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
     </div>
     <!--/.First slide-->
 
