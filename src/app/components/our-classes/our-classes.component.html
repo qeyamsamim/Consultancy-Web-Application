@@ -1,1 +1,51 @@
-<p>our-classes works!</p>
+<div class="row">
+  <div class="col">
+    <img src="../../../assets/images/home3.JPG">
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9">
+      <nav>
+        <div class="nav nav-tabs text-center mt-1" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-toefl-tab" data-toggle="tab" href="#nav-toefl" role="tab" aria-controls="nav-toefl" aria-selected="true">TOEFL iBT</a>
+          <a class="nav-item nav-link" id="nav-ielts-tab" data-toggle="tab" href="#nav-ielts" role="tab" aria-controls="nav-ielts" aria-selected="false">IELTS</a>
+          <a class="nav-item nav-link" id="nav-sat-tab" data-toggle="tab" href="#nav-sat" role="tab" aria-controls="nav-sat" aria-selected="false">SAT</a>
+          <a class="nav-item nav-link" id="nav-gre-tab" data-toggle="tab" href="#nav-gre" role="tab" aria-controls="nav-gre" aria-selected="false">GRE</a>
+          <a class="nav-item nav-link" id="nav-english-tab" data-toggle="tab" href="#nav-english" role="tab" aria-controls="nav-english" aria-selected="false">Academic English</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active mt-2" id="nav-toefl" role="tabpanel" aria-labelledby="nav-toefl-tab">
+          <h4 class="text-center">TOEFL iBT Preparation Class</h4>
+          <h5>Course Content</h5>
+          <p>This course aims to introduce students to strategies and skills to succeed on the TOEFL iBT. This course aims to introduce students to strategies and skills to succeed on the TOEFL iBT. This course aims to introduce students to strategies and skills to succeed on the TOEFL iBT. This course aims to introduce students to strategies and skills to succeed on the TOEFL iBT.</p>
+          <h5>Topics Covered</h5>
+          <ul>
+            <li>Introduction to TOEFL</li>
+            <li>Necessary skills for the Test</li>
+            <li>Practice Test 1</li>
+          </ul>
+          <h5>Class Schedulale</h5>
+          <p class="mt-0 mb-0">Saturday: 5:00 - 6:00 pm</p>
+          <p class="mt-0 mb-0">Monday: 5:00 - 6:00 pm</p>
+          <p class="mt-0">Wednesday: 5:00 - 6:00 pm</p>
+          <h5>Instructor</h5>
+          <p>Ahmad Mohammad</p>
+        </div>
+        <div class="tab-pane fade" id="nav-ielts" role="tabpanel" aria-labelledby="nav-ielts-tab">IELTS</div>
+        <div class="tab-pane fade" id="nav-sat" role="tabpanel" aria-labelledby="nav-sat-tab"></div>
+        <div class="tab-pane fade" id="nav-gre" role="tabpanel" aria-labelledby="nav-gre-tab">GRE</div>
+        <div class="tab-pane fade" id="nav-english" role="tabpanel" aria-labelledby="nav-english-tab">Academic English</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card mt-1" *ngFor="let link of links; let i = index;">
+        <div class="card-body">
+          <h4 class="card-title mb-0"> {{ link.title }} </h4>
+          <p class="card-text mb-1"> {{ link.content }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
