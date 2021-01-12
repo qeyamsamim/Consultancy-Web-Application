@@ -19,7 +19,7 @@ import { AboutComponent } from './components/about/about.component';
 import { OurLibraryComponent } from './components/our-library/our-library.component';
 import { OurClassesComponent } from './components/our-classes/our-classes.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
-
+import { StudyAbroadComponent } from './components/study-abroad/study-abroad.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +38,8 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     AboutComponent,
     OurLibraryComponent,
     OurClassesComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    StudyAbroadComponent
   ],
   imports: [
     BrowserModule,

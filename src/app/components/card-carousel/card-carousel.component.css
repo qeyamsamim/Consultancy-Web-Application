@@ -8,3 +8,9 @@
   height: 250px;
   width: 100%;
 }
+
+.btn {
+  background-color: #425778;
+  border-color: #425778;
+  color: white;
+}
