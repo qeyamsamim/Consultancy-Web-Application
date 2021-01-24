@@ -1,0 +1,56 @@
+.my-color {
+  background: #425778;
+  color: white;
+}
+
+h6 a {
+  color: white;
+  transition-duration: 0.2s
+}
+
+h6 a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a > h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+p {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 18px;
+  max-height: 360px;
+}
+
+@media only screen and (min-width: 600px) {
+  h6 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 25px;
+    max-height: 225px;
+  }
+
+  .lg-h6 {
+    font-size: 20px;
+  }
+}

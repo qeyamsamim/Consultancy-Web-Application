@@ -1,52 +1,45 @@
 <footer class="mainfooter" role="contentinfo">
   <div class="footer-middle">
-    <div class="container-fluid">
-      <div class="row mx-0 justify-content-center">
-        <div class="col-md-4 col-sm-6 px-3">
-          <!--Column1-->
-          <div class="footer-pad">
-            <h4>Consultancy Company</h4>
-            <p>We provide the best services. We provide the best services.We provide the best services.We provide the best services. We provide the best services. We provide the best services.We provide the best services.We provide the best services.</p>
-          </div>
+    <div class="row mx-0 justify-content-center">
+      <div class="col-md-4 col-sm-12 px-3">
+        <div class="footer-pad">
+          <h5>Consultancy Company</h5>
+          <p>We provide the best services. We provide the best services, and our services are unique because you can't find these anywhere else. We provide the best services. We provide the best services. We provide the best services and we assure that you will succeed with us. We provide the best services. If you have any question, please contact us. We provide the best services.We provide the best services.</p>
         </div>
-          <div class="col-md-2 col-sm-6 px-3">
-          <!--Column2-->
-          <div class="footer-pad">
-            <h4>Quick Links</h4>
-            <ul class="list-unstyled">
-              <li><a routerLink="/">Home</a></li>
-              <li><a routerLink="/news-events">Latest News & Events</a></li>
-              <li><a routerLink="/library">Why ourCompany</a></li>
-              <li><a routerLink="/classes">Classes</a></li>
-              <li><a routerLink="/classes">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 px-3">
-          <!--Column3-->
-          <div class="footer-pad">
-            <h4>Contact US:</h4>
-            <ul class="list-unstyled">
-              <li><p class="mt-0 mb-0">Address: Kart-e 3, Kabul, Afghanistan</p></li>
-              <li><p class="mt-0 mb-0">Contact Number: +93798675430</p></li>
-              <li><p class="mt-0 mb-0">Email: webapp@consultancy.af</p></li>
-            </ul>
-          </div>
-        </div>
-    	  <div class="col-md-2 px-3 text-center">
-    		  <h4>Follow Us</h4>
-          <ul class="social-network social-circle">
-            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" class="icoFacebook" title="Instagram"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-		    </div>
       </div>
-	    <div class="row">
-		    <div class="col-md-12 px-2 copy">
-			    <p class="text-center">&copy; Copyright 2020 - Company Name.  All rights reserved.</p>
-		    </div>
-	    </div>
+      <div class="col-md-2 col-sm-12 px-3">
+        <div class="footer-pad">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li *ngFor="let item of quickLinks; let i = index;">
+              <a [routerLink]="item.uRL"> {{ item.title }} </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 px-3">
+        <div class="footer-pad">
+          <h5>Contact US:</h5>
+          <ul class="list-unstyled">
+            <li><p class="mt-0 mb-0">Address: Kart-e 3, Kabul, Afghanistan</p></li>
+            <li><p class="mt-0 mb-0">Contact Number: +93798675430</p></li>
+            <li><p class="mt-0 mb-0">Email: webapp@consultancy.af</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-12 px-3 text-center">
+        <h5>Follow Us</h5>
+        <ul class="social-network social-circle">
+          <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="icoFacebook" title="Instagram"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 px-2 copy">
+        <p class="text-center">&copy; Copyright 2020 - Company Name.  All rights reserved.</p>
+      </div>
     </div>
   </div>
 </footer>

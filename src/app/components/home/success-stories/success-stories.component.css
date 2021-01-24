@@ -1,0 +1,60 @@
+.carousel {
+  width: 90%;
+  margin: auto;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.btn {
+  background-color: #425778;
+  border-color: #425778;
+  color: white;
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+p {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 18px;
+  max-height: 54px;
+}
+
+a {
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 600px) {
+  .carousel {
+    width: 95%;
+  }
+
+  .carousel-item img {
+    height: 240px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 60px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}

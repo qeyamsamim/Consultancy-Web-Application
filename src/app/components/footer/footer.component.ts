@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  quickLinks = [
+    { title: 'Home', uRL: '/'},
+    { title: 'Latest News & Events', uRL: '/news-events'},
+    { title: 'Why ourCompany', uRL: '/about'},
+    { title: 'Classes', uRL: '/classes'},
+    { title: 'FAQ', uRL: '/about'}
+  ]
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,69 @@
+<div class="row pb-2 pb-md-3 pt-4 justify-content-center">
+  <h4>Success Stories</h4>
+</div>
+
+<div id="stories-carousel" class="carousel slide d-md-none" data-ride="carousel" data-interval="false">
+
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let item of storyItems; let i = index; let isFirst = first" [ngClass]="{active:isFirst}">
+      <div class="card mb-2">
+        <img class="card-img-top mb-0" [src]="item.imageURL" [alt]="item.alt">
+        <div class="card-body pt-1">
+          <h5 class="card-title mb-0 d-inline-block"> {{ item.name }} </h5>
+          <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
+          <p class="card-text mb-3"> {{ item.content }} </p>
+          <a class="btn btn-primary" [routerLink]="item.url"> {{ item.viewMore }} </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#stories-carousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#stories-carousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+
+<div id="multi-item-example" class="carousel slide carousel-multi-item d-none d-md-block" data-interval="false" data-ride="carousel">
+
+  <a class="carousel-control-prev" href="#multi-item-example" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="col-md-3 col-sm-6" style="float:left" *ngFor="let item of storyItems">
+       <div class="card shadow mb-2">
+          <img class="card-img-top mb-0" [src]="item.imageURL" [alt]="item.alt">
+          <div class="card-body pt-1">
+            <h5 class="card-title mb-0 d-inline-block"> {{ item.name }} </h5>
+            <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
+            <p class="card-text mb-3"> {{ item.content }} </p>
+            <a class="btn btn-primary" [routerLink]="item.url"> {{ item.viewMore }} </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="col-md-3 col-sm-6" style="float:left" *ngFor="let item of storyItems">
+        <div class="card shadow mb-2">
+           <img class="card-img-top mb-0" [src]="item.imageURL" [alt]="item.alt">
+           <div class="card-body pt-1">
+             <h5 class="card-title mb-0 d-inline-block"> {{ item.name }} </h5>
+             <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
+             <p class="card-text mb-3"> {{ item.content }} </p>
+             <a class="btn btn-primary" [routerLink]="item.url"> {{ item.viewMore }} </a>
+           </div>
+         </div>
+       </div>
+    </div>
+  </div>
+</div>

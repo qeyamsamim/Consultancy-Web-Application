@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="row mb-2 pt-2 justify-content-center">
+    <h5 class="lg-h5">Latest News</h5>
+  </div>
+  <div class="row my-row">
+    <div class="col-lg-6 col-md-12 col-sm-12 px-1">
+      <div class="card shadow-sm mb-1">
+        <img class="card-img-top flex-auto my-image" src="../../../assets/images/news1.JPG" alt="Card image cap">
+        <div class="card-body pt-1 pb-2 px-2 px-md-3">
+          <h6 class="card-title mb-2 mt-1 text-center">Card title</h6>
+          <p class="card-text text-justify mb-0 mb-md-2 lg-card">
+            This is a wider card with supporting text below as This is a wider but there However, I have to attest that this card is a bit too large for any news but there is a very good solution to this issue is a natural and lead-in to additional content. This is a wider card with supporting text below as a natural lead-in this is not the way people arrange their daily routine but you did a very nice arrangement to these very difficult times of your life to not a very important additional content. This is a wider card with supporting text bottom and the below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. Also people should never use this news very seriously because.
+          </p>
+          <div class="d-inline-block font-weight-bold"><a routerLink="/news-events">Continue Reading</a></div>
+          <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
+          <div class="mt-1 mb-1 d-lg-none font-weight-bold text-center"><a routerLink="/news-events">View All</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 px-1 d-none d-lg-block">
+      <div class="row mx-0 mb-3">
+        <div class="col-md-6 col-sm-12 px-1 mb-1" *ngFor="let item of newsItems; let i = index;">
+          <div class="card shadow-sm">
+            <img class="card-img-top flex-auto small-image" [src]="item.imageURL" [alt]="item.alt">
+            <div class="card-body pt-1 pb-1">
+              <h5 class="card-title mb-2 d-inline-block"> {{ item.title }} </h5>
+              <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
+              <p class="card-text sm-card mb-0 text-justify"> {{ item.text }} </p>
+              <a class="font-weight-bold" [routerLink]="item.url"> {{ item.button }} </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+  <div class="container-fluid">
+  <div class="row mb-2 pt-2 justify-content-center">
+    <h5>Latest News</h5>
+  </div>
+  <div class="row my-row">
+    <div class="col-lg-6 col-md-12 col-sm-12 px-1">
+      <div class="card shadow-sm">
+        <img class="card-img-top flex-auto my-image" src="../../../assets/images/news1.JPG" alt="Card image cap">
+        <div class="card-body pt-1 pb-2">
+          <h6 class="card-title mb-2 mt-1 text-center">Card title</h6>
+          <p class="card-text text-justify mb-1 lg-card">
+            This is a wider card with supporting text below as This is a wider but there is a natural and lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to not a very important additional content. This is a wider card with supporting text bottom and the below as a natural lead-in to additional content. This is a wider card with supporting text below as a natural lead-in to additional content. Also people should never use this news very seriously because.
+          </p>
+          <div class="d-inline-block font-weight-bold"><a routerLink="/news-events">Continue Reading</a></div>
+          <div class="text-muted d-inline-block float-right"><small>Nov 12</small></div>
+          <div class="mt-2 mb-2 d-lg-none font-weight-bold text-center"><a routerLink="/news-events">View All</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 px-1 d-none d-lg-block">
+      <div class="row mx-0 mb-3">
+        <div class="col-md-6 col-sm-12 px-1 mb-1" *ngFor="let item of newsItems; let i = index;">
+          <div class="card shadow-sm">
+            <img class="card-img-top flex-auto small-image" [src]="item.imageURL" [alt]="item.alt">
+            <div class="card-body pt-1 pb-1">
+              <h5 class="card-title mb-1 d-inline-block"> {{ item.title }} </h5>
+              <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
+              <p class="card-text sm-card mb-0 text-justify"> {{ item.text }} </p>
+              <a class="font-weight-bold sm-a" [routerLink]="item.url"> {{ item.button }} </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+-->

@@ -19,7 +19,7 @@ export class QuickLinksComponent implements OnInit {
   quickLinksTitle = 'Quick Links';
   quickLinksItems = [
     { title: 'About Consultancy', uRL: '/about'},
-    { title: '5 Tips to a strong application', uRL: '/services'},
+    { title: '5 Tips to a prepare a strong application', uRL: '/services'},
     { title: 'Need Advising?', uRL: '/services'},
     { title: 'Our representatives in provinces', uRL: '/contact'},
     { title: 'Classes offered at our Center', uRL: '/classes'}

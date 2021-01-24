@@ -1,0 +1,59 @@
+a {
+  color: #425778;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.my-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.small-image {
+  height: 175px;
+  object-fit: cover;
+}
+
+.lg-card {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 18px;
+  max-height: 128px;
+}
+
+.sm-card {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+  .lg-h5 {
+    font-size: 28px;
+  }
+
+  h6 {
+    font-size: 24px;
+  }
+
+  .my-image {
+    height: 360px;
+  }
+
+  .lg-card {
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 120px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}

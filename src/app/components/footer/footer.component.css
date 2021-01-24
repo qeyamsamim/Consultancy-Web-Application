@@ -1,7 +1,6 @@
 footer {
   background: #425778;
   color: white;
-  margin-top:20px;
 }
 
 footer a {
@@ -13,6 +12,16 @@ footer a {
 footer a:hover {
   color: #FA944B;
   text-decoration: none;
+}
+
+p {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 20px;
+  max-height: 118px;
 }
 
 .copy {
@@ -107,4 +116,11 @@ ul.social-network li {
 
 .social-network a {
   background-color: #F9F9F9;
+}
+
+
+@media only screen and (min-width: 600px) {
+  p {
+    font-size: 14px;
+  }
 }
