@@ -1,0 +1,18 @@
+<h5 class="text-center">Search Here for Books</h5>
+<form class="form-inline my-2 pt-2 pb-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn my-2 my-sm-0" type="submit">Search</button>
+</form>
+<div class="card flex-row" *ngFor="let book of books; let i = index;">
+  <img class="rounded" [src]="book.imgURL">
+  <div class="card-body">
+    <p class="font-weight-bold d-inline-block mb-0">Name:</p>
+    <p class="d-inline-block mb-0"> {{ book.name }} </p>
+    <br>
+    <p class="font-weight-bold d-inline-block mb-0">Number:</p>
+    <p class="d-inline-block mb-0"> {{ book.number }} </p>
+    <br>
+    <p class="font-weight-bold d-inline-block">Edition:</p>
+    <p class="d-inline-block"> {{ book.edition }} </p>
+  </div>
+</div>

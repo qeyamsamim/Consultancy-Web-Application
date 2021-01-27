@@ -1,1 +1,23 @@
-<p>our-services works!</p>
+<div class="container-fluid">
+  <div class="row py-2 px-0 px-md-3">
+    <div class="col-sm-12 col-md-7">
+      <h5>Our Consultancy</h5>
+      <p>We provide different kinds of services for students.
+        We have a very good library where students can study and use different kinds of books available in the library.
+        We provide different kinds of services for students.
+        We have a very good library where students can study and use different kinds of books available in the library.
+      </p>
+      <div *ngFor="let item of services; let i = index;">
+        <h6> {{ item.title }} </h6>
+        <p> {{ item.content }} Read more at <a class="font-weight-bold"> {{ item.linkWord }} </a></p>
+      </div>
+      <ul class="pl-4" *ngFor="let item of councilingProcess; let i = index;">
+        <li class="font-weight-bold"> {{ item.title }} </li>
+        <p> {{ item.content }} </p>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-5">
+      <app-advising-form></app-advising-form>
+    </div>
+  </div>
+</div>

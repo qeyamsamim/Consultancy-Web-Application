@@ -1,0 +1,17 @@
+<div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ul class="carousel-indicators mx-1">
+    <li data-target="#demo" data-slide-to="0" class="active"><img class="rounded" src="../../../assets/images/home2.JPG" alt="Los Angeles"></li>
+    <li data-target="#demo" data-slide-to="1"><img class="rounded" src="../../../assets/images/home1.JPG" alt="Chicago"></li>
+    <li data-target="#demo" data-slide-to="2"><img class="rounded" src="../../../assets/images/home3.JPG" alt="New York"></li>
+    <li data-target="#demo" data-slide-to="3"><img class="rounded" src="../../../assets/images/news2.JPG" alt="Chicago"></li>
+    <li data-target="#demo" data-slide-to="4"><img class="rounded" src="../../../assets/images/news3.JPG" alt="New York"></li>
+    <li data-target="#demo" data-slide-to="5"><img class="rounded" src="../../../assets/images/news4.JPG" alt="New York"></li>
+    <li data-target="#demo" data-slide-to="6"><img class="rounded" src="../../../assets/images/news5.JPG" alt="New York"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let image of images; let i = index; let isFirst = first" [ngClass]="{active : isFirst}">
+      <img [src]="image.imgURL" [alt]="image.alt">
+    </div>
+  </div>
+</div>

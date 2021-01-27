@@ -1,70 +1,17 @@
-<div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
-
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"><img src="../../../assets/images/home1.JPG" alt="Los Angeles"></li>
-    <li data-target="#demo" data-slide-to="1"><img src="../../../assets/images/home2.JPG" alt="Chicago"></li>
-    <li data-target="#demo" data-slide-to="2"><img src="../../../assets/images/home3.JPG" alt="New York"></li>
-    <li data-target="#demo" data-slide-to="3"><img src="../../../assets/images/news2.JPG" alt="Chicago"></li>
-    <li data-target="#demo" data-slide-to="4"><img src="../../../assets/images/news3.JPG" alt="New York"></li>
-    <li data-target="#demo" data-slide-to="5"><img src="../../../assets/images/news4.JPG" alt="New York"></li>
-    <li data-target="#demo" data-slide-to="6"><img src="../../../assets/images/news5.JPG" alt="New York"></li>
-  </ul>
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../../assets/images/home1.JPG" alt="Los Angeles">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/home2.JPG" alt="Chicago">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/home3.JPG" alt="New York">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/news2.JPG" alt="New York">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/news3.JPG" alt="New York">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/news4.JPG" alt="New York">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/news5.JPG" alt="New York">
-    </div>
-  </div>
-</div>
+<app-library-images></app-library-images>
 <div class="container-fluid">
   <div class="row pt-4 pb-4">
-    <div class="col-md-9">
-      <h3 class="text-center"> Our Library </h3>
-      <p> {{ mainText }} </p>
+    <div class="col-md-9 col-sm-12">
+      <h5 class="text-center"> Our Library </h5>
+      <p class="text-justify"> {{ mainText }} </p>
       <h6>A Quiet Learning Environment</h6>
-      <p> {{ secondaryText }} </p>
-      <p class="font-weight-bold d-inline-block">Working Hours: </p>
+      <p class="text-justify"> {{ secondaryText }} </p>
+      <p class="font-weight-bold d-inline-block mb-0">Working Hours: </p>
       <p class="d-inline-block"> 8:00 am - 5:00 pm from Saturday - Thrusday</p>
+      <app-quick-links-library></app-quick-links-library>
     </div>
-    <div class="col-md-3">
-      <h4>Search Here for Books</h4>
-      <form class="form-inline my-2 pt-2 pb-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-color my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <div class="row pt-2 pb-2" *ngFor="let book of books; let i = index;">
-        <div class="col-md-3">
-          <img class="my-image" [src]="book.imgURL">
-        </div>
-        <div class="col-md-9 my-auto">
-          <p class="font-weight-bold d-inline-block mb-0">Name:</p>
-          <p class="d-inline-block mb-0"> {{ book.name }} </p>
-          <br>
-          <p class="font-weight-bold d-inline-block mb-0">Number:</p>
-          <p class="d-inline-block mb-0"> {{ book.number }} </p>
-          <br>
-          <p class="font-weight-bold d-inline-block">Edition:</p>
-          <p class="d-inline-block"> {{ book.edition }} </p>
-        </div>
-      </div>
+    <div class="col-md-3 col-sm-12">
+      <app-search-book></app-search-book>
     </div>
   </div>
 </div>
