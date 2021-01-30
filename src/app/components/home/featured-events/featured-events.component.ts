@@ -1,38 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { EventsService } from 'src/app/services/events.service';
 
 @Component({
   selector: 'app-featured-events',
   templateUrl: './featured-events.component.html',
-  styleUrls: ['./featured-events.component.css']
+  styleUrls: ['./featured-events.component.css'],
+  providers: [EventsService]
 })
 export class FeaturedEventsComponent implements OnInit {
 
-  eventItem = [
-    {
-      day: '24',
-      month: 'DEC',
-      year: '2020',
-      type: 'ONLINE EVENT',
-      category: 'For Undergraduate',
-      name: 'Study Abroad',
-      url: '/news-events',
-      register: 'Click here to Register'
-    },
-    {
-      day: '28',
-      month: 'DEC',
-      year: '2020',
-      type: 'ONLINE EVENT',
-      category: 'For Graduate',
-      name: 'Study Abroad',
-      url: '/news-events',
-      register: 'Click here to Register'
-    }
-  ];
+  events = [];
 
-  constructor() { }
+  constructor(
+    private eventsService: EventsService
+  ) {}
 
   ngOnInit(): void {
+    this.events = this.eventsService.getFeaturedEvents();
   }
 
 }

@@ -18,9 +18,9 @@
   <div class="col-sm-12 col-md-3 mx-3">
     <h5> {{ quickLinksTitle }} </h5>
     <ul class="list-unstyled pt-3">
-      <li *ngFor="let item of quickLinksItems; let i = index;">
-        <a [routerLink]="item.uRL"><h6 class="lg-h6"> {{ item.title }} </h6></a>
-        <hr class="mt-3 mb-3" *ngIf="i != quickLinksItems.length - 1">
+      <li *ngFor="let item of quickLinks; let i = index;">
+        <a [routerLink]="item.url"><h6 class="lg-h6"> {{ item.title }} </h6></a>
+        <hr class="mt-3 mb-3" *ngIf="i != quickLinks.length - 1">
       </li>
     </ul>
   </div>

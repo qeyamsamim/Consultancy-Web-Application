@@ -1,0 +1,28 @@
+<nav>
+  <div class="nav nav-tabs text-center mt-1" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-toefl-tab" data-toggle="tab" href="#nav-toefl" role="tab" aria-controls="nav-toefl" aria-selected="true">TOEFL iBT</a>
+    <a class="nav-item nav-link" id="nav-ielts-tab" data-toggle="tab" href="#nav-ielts" role="tab" aria-controls="nav-ielts" aria-selected="false">IELTS</a>
+    <a class="nav-item nav-link" id="nav-sat-tab" data-toggle="tab" href="#nav-sat" role="tab" aria-controls="nav-sat" aria-selected="false">SAT</a>
+    <a class="nav-item nav-link" id="nav-gre-tab" data-toggle="tab" href="#nav-gre" role="tab" aria-controls="nav-gre" aria-selected="false">GRE</a>
+    <a class="nav-item nav-link" id="nav-english-tab" data-toggle="tab" href="#nav-english" role="tab" aria-controls="nav-english" aria-selected="false">Academic English</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div
+    class="tab-pane fade mt-2 show"
+    [id]="item.tabId"
+    role="tabpanel"
+    aria-labelledby="nav-toefl-tab"
+    *ngFor="let item of classes; let isFirst = first"
+    [ngClass]="{active: isFirst}">
+      <h4 class="text-center"> {{ item.name }} </h4>
+      <h5>Course Content</h5>
+      <p> {{ item.desc }} </p>
+      <h5>Topics Covered</h5>
+      <p> {{ item.topics }} </p>
+      <h5>Class Schedulale</h5>
+      <p class="mt-0 mb-0"> {{ item.schedule }} </p>
+      <h5>Instructor</h5>
+      <p> {{ item.instructor }} </p>
+  </div>
+</div>

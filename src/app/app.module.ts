@@ -25,6 +25,10 @@ import { SearchBookComponent } from './components/our-library/search-book/search
 import { QuickLinksLibraryComponent } from './components/our-library/quick-links-library/quick-links-library.component';
 import { LibraryImagesComponent } from './components/our-library/library-images/library-images.component';
 import { FormsModule } from '@angular/forms';
+import { NewsComponent } from './components/news-events/news/news.component';
+import { OurEventsComponent } from './components/news-events/our-events/our-events.component';
+import { ClassContentComponent } from './components/our-classes/class-content/class-content.component';
+import { ClassQuickLinksComponent } from './components/our-classes/class-quick-links/class-quick-links.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { FormsModule } from '@angular/forms';
     SuccessStoriesComponent,
     SearchBookComponent,
     QuickLinksLibraryComponent,
-    LibraryImagesComponent
+    LibraryImagesComponent,
+    NewsComponent,
+    OurEventsComponent,
+    ClassContentComponent,
+    ClassQuickLinksComponent
   ],
   imports: [
     FormsModule,
