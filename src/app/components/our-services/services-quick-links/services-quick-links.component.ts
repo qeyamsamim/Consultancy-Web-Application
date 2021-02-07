@@ -3,11 +3,11 @@ import { QuickLinks } from 'src/app/models/quick-links.model';
 import { QuickLinksService } from 'src/app/services/quick-links.service';
 
 @Component({
-  selector: 'app-class-quick-links',
-  templateUrl: './class-quick-links.component.html',
-  styleUrls: ['./class-quick-links.component.css']
+  selector: 'app-services-quick-links',
+  templateUrl: './services-quick-links.component.html',
+  styleUrls: ['./services-quick-links.component.css']
 })
-export class ClassQuickLinksComponent implements OnInit {
+export class ServicesQuickLinksComponent implements OnInit {
 
   links: QuickLinks[] = [];
 
@@ -16,7 +16,7 @@ export class ClassQuickLinksComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.links = this.quickLinksService.getClassQuickLinks();
+    this.links = this.quickLinksService.getQuickLinks();
   }
 
 }

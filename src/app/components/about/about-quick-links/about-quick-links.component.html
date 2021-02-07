@@ -1,0 +1,12 @@
+<div class="row px-3 px-md-5 py-2 text-center">
+  <div class="col-sm-12 col-md-3 py-1 py-md-3" *ngFor="let item of links; let i = index;">
+    <div class="card shadow-sm rounded">
+      <img class="rounded" [src]="item.imgURL">
+      <div class="card-body">
+        <a [routerLink]="item.url">
+          <h6> {{ item.title }} </h6>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

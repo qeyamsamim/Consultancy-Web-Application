@@ -30,14 +30,19 @@ export class OurServicesComponent implements OnInit {
       content: 'This is a great library which has many different resources. You can different kinds of books here. You can study in '+
       'a quiet place. We are always happy to welcome you in our library. You can refer to our library section and check for books. '+
       'This is a great library which has many different resources. You can different kinds of books here. You can study in a quiet '+
-      'place.',
+      'place. There are many other great things about our center and the classes offered in our classes.',
       linkWord: 'Classes',
       url: '/classes'
     },
     {
       title: 'Educational Advising',
       content: 'We provide the best educational consultancy services. Students can set an appointment with our advisor and discuss '+
-      'everything in details. We have trained more than hundreds of students since 2011.',
+      'everything in details. We have trained more than hundreds of students since 2011. We provide the best educational consultancy '+
+      'services. Students can set an appointment with our advisor and discuss everything in details. We have trained more than hundreds '+
+      'everything in details. We have trained more than hundreds of students since 2011. We provide the best educational consultancy '+
+      'services. Students can set an appointment with our advisor and discuss everything in details. We have trained more than hundreds '+
+      'of students since 2011. We provide the best educational consultancy services. Students can set an appointment with our advisor '+
+      'and discuss everything in details. We have trained more than hundreds of students since 2011.',
       linkWord: '',
       url: ''
     }
@@ -72,6 +77,8 @@ export class OurServicesComponent implements OnInit {
     {
       title: 'Visa & Pre-departure',
       content: 'Our pre-departure support will help you prepare for your trip. It includes topics like how to learn a new language '+
+      'how to prevent culture shock. Our pre-departure support will help you prepare for your trip. It includes topics like how to learn '+
+      'Our pre-departure support will help you prepare for your trip to anywhere. It includes topics like how to learn a new language '+
       'how to prevent culture shock. Our pre-departure support will help you prepare for your trip. It includes topics like how to learn '+
       'a new language how to prevent culture shock.'
     }

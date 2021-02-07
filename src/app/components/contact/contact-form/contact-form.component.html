@@ -1,0 +1,92 @@
+<form class="mx-0 mx-md-2 pt-4 pt-md-2 pb-2 pb-md-4" [formGroup]="messageForm" (submit)="onSubmit()">
+  <h6 class="pb-3">Send us a Message!</h6>
+  <div class="form-row my-2">
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        formControlName="firstName"
+        placeholder="First Name *">
+        <small
+          *ngIf="!messageForm.get('firstName').valid && messageForm.get('firstName').touched"
+          class="form-text">
+          <span *ngIf="messageForm.get('firstName').errors['required']">
+            This Field is Required!
+          </span>
+          <span *ngIf="messageForm.get('firstName').errors['pattern']">
+            Please Enter a Valid Input!
+          </span>
+        </small>
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control mt-2 mt-md-0"
+        id="lastName"
+        formControlName="lastName"
+        placeholder="Last Name *">
+        <small
+          *ngIf="!messageForm.get('lastName').valid && messageForm.get('lastName').touched"
+          class="form-text">
+          <span *ngIf="messageForm.get('lastName').errors['required']">
+            This Field is Required!
+          </span>
+          <span *ngIf="messageForm.get('lastName').errors['pattern']">
+            Please Enter a Valid Input!
+          </span>
+        </small>
+    </div>
+  </div>
+  <div class="form-row my-2">
+    <div class="col-md-6 pb-2">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+        aria-describedby="emailHelp"
+        placeholder="Enter Email *">
+        <small
+          *ngIf="!messageForm.get('email').valid && messageForm.get('email').touched"
+          class="form-text">
+          <span *ngIf="messageForm.get('email').errors['email']">
+            Please Enter a Valid Email Address!
+          </span>
+          <span *ngIf="messageForm.get('email').errors['required']">
+            Email is Required!
+          </span>
+        </small>
+      <small
+        id="emailHelp"
+        class="form-text text-muted">*We'll never share your email with anyone else.</small>
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        id="subject"
+        formControlName="subject"
+        placeholder="Subject *">
+        <small
+          *ngIf="!messageForm.get('subject').valid && messageForm.get('subject').touched"
+          class="form-text">
+          Subject is Required!
+        </small>
+    </div>
+  </div>
+  <div class="form-group pb-2">
+    <textarea
+      class="form-control"
+      id="message"
+      name="message"
+      formControlName="message"
+      placeholder="Message"
+      rows="4"
+      maxlength="200"
+      [(ngModel)]="charCount">
+    </textarea>
+    <span class="float-right text-muted"><small> {{ charCount.length }}/250</small></span>
+  </div>
+  <button type="submit" class="btn btn-block" [disabled]="!messageForm.valid">Send Message</button>
+</form>

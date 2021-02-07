@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,11 +25,21 @@ import { SuccessStoriesComponent } from './components/home/success-stories/succe
 import { SearchBookComponent } from './components/our-library/search-book/search-book.component';
 import { QuickLinksLibraryComponent } from './components/our-library/quick-links-library/quick-links-library.component';
 import { LibraryImagesComponent } from './components/our-library/library-images/library-images.component';
-import { FormsModule } from '@angular/forms';
 import { NewsComponent } from './components/news-events/news/news.component';
 import { OurEventsComponent } from './components/news-events/our-events/our-events.component';
 import { ClassContentComponent } from './components/our-classes/class-content/class-content.component';
 import { ClassQuickLinksComponent } from './components/our-classes/class-quick-links/class-quick-links.component';
+import { ServicesQuickLinksComponent } from './components/our-services/services-quick-links/services-quick-links.component';
+import { ServicesNewsComponent } from './components/our-services/services-news/services-news.component';
+import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
+import { ContactDetailsComponent } from './components/contact/contact-details/contact-details.component';
+import { AboutQuickLinksComponent } from './components/about/about-quick-links/about-quick-links.component';
+
+import { QuickLinksService } from './services/quick-links.service';
+import { NewsService } from './services/news.service';
+import { ClassesService } from './services/classes.service';
+import { AdvisingFormService } from './services/advisong-form.service';
+import { UserMessageService } from './services/user-message.service';
 
 @NgModule({
   declarations: [
@@ -57,14 +68,20 @@ import { ClassQuickLinksComponent } from './components/our-classes/class-quick-l
     NewsComponent,
     OurEventsComponent,
     ClassContentComponent,
-    ClassQuickLinksComponent
+    ClassQuickLinksComponent,
+    ServicesQuickLinksComponent,
+    ServicesNewsComponent,
+    ContactFormComponent,
+    ContactDetailsComponent,
+    AboutQuickLinksComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [NewsService, ClassesService, QuickLinksService, AdvisingFormService, UserMessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,3 +3,13 @@
   width: 20%;
   color: #425778;
 }
+
+a, p, li {
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 600px){
+  a, p, li {
+    font-size: 15px;
+  }
+}

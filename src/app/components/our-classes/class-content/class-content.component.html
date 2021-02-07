@@ -1,13 +1,13 @@
 <nav>
   <div class="nav nav-tabs text-center mt-1" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-toefl-tab" data-toggle="tab" href="#nav-toefl" role="tab" aria-controls="nav-toefl" aria-selected="true">TOEFL iBT</a>
-    <a class="nav-item nav-link" id="nav-ielts-tab" data-toggle="tab" href="#nav-ielts" role="tab" aria-controls="nav-ielts" aria-selected="false">IELTS</a>
-    <a class="nav-item nav-link" id="nav-sat-tab" data-toggle="tab" href="#nav-sat" role="tab" aria-controls="nav-sat" aria-selected="false">SAT</a>
-    <a class="nav-item nav-link" id="nav-gre-tab" data-toggle="tab" href="#nav-gre" role="tab" aria-controls="nav-gre" aria-selected="false">GRE</a>
-    <a class="nav-item nav-link" id="nav-english-tab" data-toggle="tab" href="#nav-english" role="tab" aria-controls="nav-english" aria-selected="false">Academic English</a>
+    <a class="nav-item nav-link px-0 active" id="nav-toefl-tab" data-toggle="tab" href="#nav-toefl" role="tab" aria-controls="nav-toefl" aria-selected="true">TOEFL iBT</a>
+    <a class="nav-item nav-link px-0" id="nav-ielts-tab" data-toggle="tab" href="#nav-ielts" role="tab" aria-controls="nav-ielts" aria-selected="false">IELTS</a>
+    <a class="nav-item nav-link px-0" id="nav-sat-tab" data-toggle="tab" href="#nav-sat" role="tab" aria-controls="nav-sat" aria-selected="false">SAT</a>
+    <a class="nav-item nav-link px-0" id="nav-gre-tab" data-toggle="tab" href="#nav-gre" role="tab" aria-controls="nav-gre" aria-selected="false">GRE</a>
+    <a class="nav-item nav-link px-0" id="nav-english-tab" data-toggle="tab" href="#nav-english" role="tab" aria-controls="nav-english" aria-selected="false">Academic English</a>
   </div>
 </nav>
-<div class="tab-content" id="nav-tabContent">
+<div class="tab-content pt-1 pt-md-2 px-2 px-md-4" id="nav-tabContent">
   <div
     class="tab-pane fade mt-2 show"
     [id]="item.tabId"
@@ -15,14 +15,18 @@
     aria-labelledby="nav-toefl-tab"
     *ngFor="let item of classes; let isFirst = first"
     [ngClass]="{active: isFirst}">
-      <h4 class="text-center"> {{ item.name }} </h4>
-      <h5>Course Content</h5>
+      <h5 class="text-center pb-2"> {{ item.name }} </h5>
+      <h6>Course Content</h6>
       <p> {{ item.desc }} </p>
-      <h5>Topics Covered</h5>
-      <p> {{ item.topics }} </p>
-      <h5>Class Schedulale</h5>
-      <p class="mt-0 mb-0"> {{ item.schedule }} </p>
-      <h5>Instructor</h5>
+      <h6>Topics Covered</h6>
+      <ul>
+        <li  *ngFor="let topic of item.topics;"> {{ topic }} </li>
+      </ul>
+      <h6>Class Schedulale</h6>
+      <ul>
+        <li *ngFor="let schedule of item.schedule;"> {{ schedule }} </li>
+      </ul>
+      <h6>Instructor</h6>
       <p> {{ item.instructor }} </p>
   </div>
 </div>

@@ -215,5 +215,9 @@ export class NewsService {
     return this.news.filter((news) => news.category === 'successStories');
   }
 
+  getServiceNews() {
+    return this.news.filter((news) => news.category === 'classes' || news.category === 'library');
+  }
+
   constructor() { }
 }

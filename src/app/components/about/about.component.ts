@@ -16,7 +16,9 @@ export class AboutComponent implements OnInit {
       'their friends. Our staff is always more than happy to help visitors. Our center is one of the prestigous educational consultancy in the '+
       'region. It was established a decade ago and was open for consultation for more than thousands of students. This center provides '+
       'different services for students with different education level. Students can find different facilities here. They can study in a '+
-      'quiet learning environment together with other students or their friends. Our staff is always more than happy to help visitors.'
+      'quiet learning environment together with other students or their friends. Our staff is always more than happy to help visitors. '+
+      'You can also join the visitors and other students who always come to your center. You can come and study here to improve you '+
+      'skills and advance your knowledge for a successful futures.'
     },
     {
       title: 'Our Mission',

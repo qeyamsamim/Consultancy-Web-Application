@@ -1,37 +1,113 @@
-<form class="mx-2 py-2">
-  <h5 class="text-center pb-2">Advising Form</h5>
+<form class="mx-2 pt-2 pb-3 pb-md-3" [formGroup]="advisingForm" (ngSubmit)="onSubmit()">
+  <h5 class="text-center pb-3">Advising Form</h5>
   <div class="form-row my-2">
     <div class="col-md-6">
-      <input type="text" class="form-control mb-2 mb-md-0" id="formGroupExampleInput" placeholder="First name">
+      <input
+        type="text"
+        class="form-control"
+        id="fristName"
+        formControlName="fristName"
+        placeholder="First Name *">
+        <small
+          *ngIf="!advisingForm.get('fristName').valid && advisingForm.get('fristName').touched"
+          class="form-text">
+          <span *ngIf="advisingForm.get('fristName').errors['required']">
+            This Field is Required!
+          </span>
+          <span *ngIf="advisingForm.get('fristName').errors['pattern']">
+            Please Enter a Valid Input!
+          </span>
+        </small>
     </div>
     <div class="col-md-6">
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Last name">
+      <input
+        type="text"
+        class="form-control mt-2 mt-md-0"
+        id="lastName"
+        formControlName="lastName"
+        placeholder="Last Name *">
+        <small
+          *ngIf="!advisingForm.get('lastName').valid && advisingForm.get('lastName').touched"
+          class="form-text">
+          <span *ngIf="advisingForm.get('lastName').errors['required']">
+            This Field is Required!
+          </span>
+          <span *ngIf="advisingForm.get('lastName').errors['pattern']">
+            Pleas Enter a Valid Input!
+          </span>
+        </small>
     </div>
   </div>
   <div class="form-row my-2">
     <div class="col-md-6">
-      <input type="text" class="form-control mb-2 mb-md-0" id="formGroupExampleInput" placeholder="Phone number">
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        formControlName="phoneNumber"
+        placeholder="Phone Number *">
+        <small
+          *ngIf="!advisingForm.get('phoneNumber').valid && advisingForm.get('phoneNumber').touched"
+          class="form-text">
+          <span *ngIf="advisingForm.get('phoneNumber').errors['required']">
+            This Field is Required!
+          </span>
+          <span *ngIf="advisingForm.get('phoneNumber').errors['pattern']">
+            Please Enter a Valid Phone Number!
+          </span>
+        </small>
     </div>
     <div class="col-md-6">
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">*We'll never share your email with anyone else.</small>
+      <input
+        type="email"
+        class="form-control mt-2 mt-md-0"
+        id="email"
+        formControlName="email"
+        aria-describedby="emailHelp"
+        placeholder="Enter Email *">
+        <small
+          *ngIf="!advisingForm.get('email').valid && advisingForm.get('email').touched"
+          class="form-text">
+          <span *ngIf="advisingForm.get('email').errors['required']">
+            Email is Required!
+          </span>
+          <span *ngIf="advisingForm.get('email').errors['email']">
+            Please Enter a Valid Email Address!
+          </span>
+        </small>
+      <small id="emailHelp" class="text-muted">* We will never share your email with anyone else.</small>
     </div>
   </div>
   <div class="form-group">
-    <select id="inputStudyLevel" class="form-control">
-      <option selected>Intended level of study study</option>
-      <option>High School</option>
-      <option>Undergraduate</option>
-      <option>Masters Degree</option>
-      <option>PhD</option>
+    <select id="studyLevel" formControlName="studyLevel" class="form-control">
+      <option *ngFor="let item of studyLevel; let i = index;" [value]="item"> {{ item }} </option>
     </select>
+    <small
+      *ngIf="!advisingForm.get('studyLevel').valid && advisingForm.get('studyLevel').touched"
+      class="form-text">
+      Please select a Level of Study!
+    </small>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Which Program You are planning to apply?">
+    <input
+      type="text"
+      class="form-control"
+      id="programType"
+      formControlName="programType"
+      placeholder="Which Program You are planning to apply?">
   </div>
-  <div class="form-group">
-    <textarea class="form-control" id="formGroupExampleInput" name="message" placeholder="Message" rows="4" maxlength="200" [(ngModel)]="charCount"></textarea>
+  <div class="form-group pb-2">
+    <textarea
+      class="form-control"
+      id="message"
+      name="message"
+      formControlName="message"
+      placeholder="Message"
+      rows="4"
+      maxlength="200"
+      [(ngModel)]="charCount">
+    </textarea>
     <span class="float-right text-muted"><small> {{ charCount.length }}/200</small></span>
   </div>
-  <button type="submit" class="btn">Submit</button>
+  <button type="submit" class="btn btn-block" [disabled]="!advisingForm.valid">Submit</button>
 </form>

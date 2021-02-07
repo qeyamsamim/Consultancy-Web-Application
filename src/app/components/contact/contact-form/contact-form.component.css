@@ -1,4 +1,4 @@
-input, textarea, select, option {
+form input, form textarea {
   font-size: 13px;
 }
 
@@ -8,16 +8,16 @@ form .btn {
   color: white;
 }
 
-form .form-text {
-  color: red;
-}
-
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
+form .form-text {
+  color: red;
+}
+
 @media only screen and (min-width: 600px) {
-  input, textarea, select {
+  form input, form textarea {
     font-size: 14px;
   }
 
@@ -26,6 +26,10 @@ input.ng-invalid.ng-touched {
   }
 
   form .btn-block {
-    width: 90px;
+    width: 130px;
+  }
+
+  form h6 {
+    font-size: 20px;
   }
 }

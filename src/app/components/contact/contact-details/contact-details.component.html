@@ -1,0 +1,26 @@
+<h6>We will be happy to have you around!</h6>
+<p class="text-justify">
+  Hello everyone welcome to this app of our consultancy. We are always happy to have you around. You can use the contact form on this
+  page to send us a message. In addition below are the contact details of our center. We are always available and feel free to contact
+  us anytime, and we will get back to you as soon as possible. We have several other branches which are located in the provinces of
+  Afghanistan. All our centers provide the same services. Always come and enjoy the best services offered by our center all over
+  the country. In addition below are the contact details of our center. We are always available and always feel free to contact
+  us anytime, and we will get back to you as soon as possible. We have several other branches which are located in the provinces of
+  Afghanistan. All our centers provide the same services. Always come and enjoy the best services offered by our center all over
+  the country. Hello everyone welcome to this app of our consultancy. We are always happy to have you around. You can use the contact form on this
+  page to send us a message. In addition below are the contact details of our center. We are always available and feel free to contact
+  us anytime, and we will get back to you as soon as possible. We have several other branches which are located in the provinces of
+  Afghanistan.
+</p>
+<h6 class="py-2">Contact Info</h6>
+<div class="row">
+  <div class="col-sm-12 col-md-4" *ngFor="let item of contacts; let i = index;">
+    <p class="font-weight-bold mb-2"> {{ item.place }} </p>
+    <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> {{ item.address }} </p>
+    <p class="mb-1">
+      <i class="bi bi-telephone-fill"></i>
+      <span *ngFor="let num of item.contact"> {{ num }}</span>
+    </p>
+    <p class="pb-1"><i class="bi bi-envelope-fill"></i> {{ item.email }}</p>
+  </div>
+</div>

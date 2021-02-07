@@ -1,23 +1,33 @@
-<div class="container-fluid">
-  <div class="row py-2 px-0 px-md-3">
-    <div class="col-sm-12 col-md-7">
-      <h5>Our Consultancy</h5>
-      <p>We provide different kinds of services for students.
-        We have a very good library where students can study and use different kinds of books available in the library.
-        We provide different kinds of services for students.
-        We have a very good library where students can study and use different kinds of books available in the library.
-      </p>
-      <div *ngFor="let item of services; let i = index;">
-        <h6> {{ item.title }} </h6>
-        <p> {{ item.content }} Read more at <a class="font-weight-bold"> {{ item.linkWord }} </a></p>
+<div class="row py-2 px-2 px-md-4">
+  <div class="col-sm-12 col-md-7">
+    <h5 class="text-center">Our Consultancy</h5>
+    <p class="text-justify">
+      We provide different kinds of services for all students. We have a very good, rich, and calm library where students can read and
+      study and use different kinds of books available in our nice library. We provide different kinds of services for students.
+      We have a very good library where students can study and use different kinds of books available in the library.
+      We provide different kinds of services for students. We have a very good library where students can study
+      and use different kinds of books available in the library. We provide different kinds of services for students.
+      We have a very good library where students can study and use different kinds of books available in the library.
+      We provide different kinds of services for students. We have a very good library where students can study
+      and use different kinds of books available in the library. We provide different kinds of services for students.
+      We have a very good library where students can study and use different kinds of books available in the library.
+    </p>
+    <div *ngFor="let item of services; let i = index;">
+      <h6> {{ item.title }} </h6>
+      <p> {{ item.content }} Read more at <a class="font-weight-bold"> {{ item.linkWord }} </a></p>
+    </div>
+    <ul class="pl-4" *ngFor="let item of councilingProcess; let i = index;">
+      <li class="font-weight-bold"> {{ item.title }} </li>
+      <p> {{ item.content }} </p>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-5">
+    <app-services-quick-links></app-services-quick-links>
+    <div class="row">
+      <div class="col-12">
+        <app-advising-form></app-advising-form>
       </div>
-      <ul class="pl-4" *ngFor="let item of councilingProcess; let i = index;">
-        <li class="font-weight-bold"> {{ item.title }} </li>
-        <p> {{ item.content }} </p>
-      </ul>
     </div>
-    <div class="col-sm-12 col-md-5">
-      <app-advising-form></app-advising-form>
-    </div>
+    <app-services-news></app-services-news>
   </div>
 </div>

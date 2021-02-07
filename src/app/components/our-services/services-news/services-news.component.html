@@ -1,0 +1,12 @@
+<div class="row pt-2 px-2 px-md-3 justify-content-center">
+  <div class="col-sm-12 col-md-6 px-2 px-md-1 py-1" *ngFor="let item of news.slice(0,4); let i = index;">
+    <div class="card shadow-sm">
+      <img class="card-img-top flex-auto small-image" [src]="item.imgURL" [alt]="item.alt">
+      <div class="card-body py-1 px-2">
+        <h6 class="card-title mb-2"> {{ item.title }} </h6>
+        <p class="card-text sm-card mb-0 text-justify"> {{ item.content }} </p>
+        <a class="font-weight-bold" [routerLink]=""> Read More </a>
+      </div>
+    </div>
+  </div>
+</div>
