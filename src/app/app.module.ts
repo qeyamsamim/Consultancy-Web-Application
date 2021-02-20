@@ -40,6 +40,11 @@ import { NewsService } from './services/news.service';
 import { ClassesService } from './services/classes.service';
 import { AdvisingFormService } from './services/advisong-form.service';
 import { UserMessageService } from './services/user-message.service';
+import { ShortenPipe } from './shared/shorten.pipe';
+import { FilterPipe } from './components/our-library/search-book/filter.pipe';
+import { BooksService } from './services/books.service';
+import { AlertComponent } from './shared/components/alert/alert.component';
+import { EventsService } from './services/events.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +78,10 @@ import { UserMessageService } from './services/user-message.service';
     ServicesNewsComponent,
     ContactFormComponent,
     ContactDetailsComponent,
-    AboutQuickLinksComponent
+    AboutQuickLinksComponent,
+    ShortenPipe,
+    FilterPipe,
+    AlertComponent
   ],
   imports: [
     FormsModule,
@@ -81,7 +89,15 @@ import { UserMessageService } from './services/user-message.service';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [NewsService, ClassesService, QuickLinksService, AdvisingFormService, UserMessageService],
+  providers: [
+    NewsService,
+    EventsService,
+    ClassesService,
+    QuickLinksService,
+    BooksService,
+    AdvisingFormService,
+    UserMessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

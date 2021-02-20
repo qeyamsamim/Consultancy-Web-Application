@@ -11,56 +11,46 @@ a {
 
 .news-img {
   height: 150px;
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 
-.my-text {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
+p {
   font-size: 13px;
   line-height: 18px;
-  max-height: 126px;
 }
 
-.date-text {
+.text-muted {
   font-size: 13px;
 }
 
-h5, .event-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 95%;
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .news-img {
+    height: 200px;
+    max-width: 220px;
+  }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   h5 {
     font-size: 28px;
   }
 
   .news-img {
     height: 300px;
-    width: 300px;
+    max-width: 300px;
   }
 
-  .my-text {
+  p {
     font-size: 16px;
     line-height: 22px;
-    max-height: 154px;
   }
 
   a {
     font-size: 16px;
   }
 
-  p > a {
-    font-size: 12px;
-  }
-
-  .date-text {
+  .text-muted {
     font-size: 16px;
   }
 }

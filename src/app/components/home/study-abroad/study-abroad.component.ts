@@ -7,7 +7,7 @@ import { NewsService } from 'src/app/services/news.service';
 @Component({
   selector: 'app-study-abroad',
   templateUrl: './study-abroad.component.html',
-  styleUrls: ['./study-abroad.component.css'],
+  styleUrls: ['./study-abroad.component.css', '../../../app.component.css'],
   providers: [NewsService]
 })
 export class StudyAbroadComponent implements OnInit {

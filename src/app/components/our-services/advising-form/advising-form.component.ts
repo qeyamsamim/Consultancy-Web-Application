@@ -15,6 +15,9 @@ export class AdvisingFormComponent implements OnInit {
   charCount = '';
   advisingForm: FormGroup;
   pattern = "^[a-zA-Z]{1,30}$";
+  isClicked = false;
+  message = 'Thank you very much for your interest in our advising session. You have successfully submitted the form. We will '+
+  'get back to you soon!';
 
   constructor(
     private advisingFormService: AdvisingFormService
@@ -44,8 +47,13 @@ export class AdvisingFormComponent implements OnInit {
       value.message
     );
     console.log(advisingForm);
+    this.isClicked = true;
     this.advisingForm.reset();
     this.charCount = '';
+  }
+
+  onHandleClose() {
+    this.isClicked = false;
   }
 
 }

@@ -7,7 +7,7 @@ import { OurClass } from '../../../models/class.model';
 @Component({
   selector: 'app-class-content',
   templateUrl: './class-content.component.html',
-  styleUrls: ['./class-content.component.css']
+  styleUrls: ['./class-content.component.css', '../../../app.component.css']
 })
 export class ClassContentComponent implements OnInit {
 

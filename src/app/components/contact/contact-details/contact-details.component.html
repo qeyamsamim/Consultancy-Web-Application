@@ -1,4 +1,4 @@
-<h6>We will be happy to have you around!</h6>
+<h6 class="py-2">We will be happy to have you around!</h6>
 <p class="text-justify">
   Hello everyone welcome to this app of our consultancy. We are always happy to have you around. You can use the contact form on this
   page to send us a message. In addition below are the contact details of our center. We are always available and feel free to contact
@@ -14,7 +14,7 @@
 </p>
 <h6 class="py-2">Contact Info</h6>
 <div class="row">
-  <div class="col-sm-12 col-md-4" *ngFor="let item of contacts; let i = index;">
+  <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let item of contacts; let i = index;">
     <p class="font-weight-bold mb-2"> {{ item.place }} </p>
     <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> {{ item.address }} </p>
     <p class="mb-1">

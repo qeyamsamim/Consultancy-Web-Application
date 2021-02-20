@@ -1,79 +1,45 @@
-.container-fluid {
-  width: 100%;
+div.container-fluid {
+  width: 100vw;
 }
 
-.row {
-  background-color: #f3f3f3e0;
-}
-
-h4 {
-  color: #425778;
-}
-
-div > img {
+img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.card {
+div.card {
   min-height: 350px;
   background-color: #f3f3f3e0;
   border-color: #f3f3f3e0;
 }
 
-.btn {
+a.btn {
   background-color: #425778;
   border-color: #425778;
   color: white;
 }
 
-.card-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 90%;
-}
-
-.card-text {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  font-size: 13px;
-  line-height: 18px;
-  max-height: 54px;
-}
-
-a {
-  font-size: 13px;
-}
-
-
-@media only screen and (min-width: 600px) {
-  .container-fluid {
-    width: 90%;
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  div.container-fluid {
+    width: 95vw;
   }
 
-  div > img {
+  img {
+    height: 280px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  div.container-fluid {
+    width: 90vw;
+  }
+
+  img {
     height: 300px;
   }
 
-  h6 {
-    font-size: 24px;
-  }
-
-  a {
-    font-size: 14px;
-  }
-
-  .card {
+  div.card {
     min-height: 450px;
-  }
-
-  .card-text {
-    font-size: 14px;
-    line-height: 20px;
-    max-height: 60px;
   }
 }

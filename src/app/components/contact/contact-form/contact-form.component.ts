@@ -5,13 +5,15 @@ import { UserMessage } from 'src/app/models/user-message.model';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+  styleUrls: ['./contact-form.component.css', '../../../app.component.css']
 })
 export class ContactFormComponent implements OnInit {
 
   charCount = '';
   messageForm: FormGroup;
   pattern = "^[a-zA-Z]{1,30}$";
+  message = 'We have successfully received your message. We will contact you back if necssary!'
+  isClicked = false;
 
   constructor() { }
 
@@ -35,8 +37,13 @@ export class ContactFormComponent implements OnInit {
       value.message
     );
     console.log(newMessage);
+    this.isClicked = true;
     this.messageForm.reset();
     this.charCount = '';
+  }
+
+  onHandleClose() {
+    this.isClicked = false;
   }
 
 }

@@ -1,18 +1,20 @@
-<div class="row pb-2 pb-md-3 pt-4 justify-content-center">
+<div class="row pb-2 pb-md-3 pt-2 pt-md-5 justify-content-center">
   <h4>Success Stories</h4>
 </div>
 
 <div id="stories-carousel" class="carousel slide d-md-none" data-ride="carousel" data-interval="false">
 
-  <div class="carousel-inner">
+  <div class="carousel-inner py-1">
     <div class="carousel-item" *ngFor="let item of successStories; let i = index; let isFirst = first" [ngClass]="{active:isFirst}">
-      <div class="card mb-2">
+      <div class="card shadow-sm mb-2">
         <img class="card-img-top mb-0" [src]="item.imgURL" [alt]="item.alt">
-        <div class="card-body pt-1">
-          <h5 class="card-title mb-0 d-inline-block"> {{ item.title }} </h5>
-          <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
-          <p class="card-text mb-3"> {{ item.content }} </p>
-          <a class="btn btn-primary" [routerLink]="">Read More</a>
+        <div class="card-body pt-1 px-2">
+          <h5 class="card-title mb-0 d-inline-block"> {{ item.title | shorten:35 }} </h5>
+          <div class="text-muted d-inline-block float-right">
+            <small> {{ item.date | date:'MMM' | uppercase }} {{ item.date | date:'dd' }} </small>
+          </div>
+          <p class="card-text mb-3"> {{ item.content | shorten:145 }} </p>
+          <a class="btn btn-primary" routerLink="/news-events">Read More</a>
         </div>
       </div>
     </div>
@@ -37,30 +39,34 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner py-3" role="listbox">
     <div class="carousel-item active">
-      <div class="col-md-3 col-sm-6" style="float:left" *ngFor="let item of successStories">
-       <div class="card shadow mb-2">
+      <div class="col-md-3 px-1" style="float:left" *ngFor="let item of successStories">
+       <div class="card shadow-sm mb-2">
           <img class="card-img-top mb-0" [src]="item.imgURL" [alt]="item.alt">
           <div class="card-body pt-1">
-            <h5 class="card-title mb-0 d-inline-block"> {{ item.title }} </h5>
-            <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
-            <p class="card-text mb-3"> {{ item.content }} </p>
-            <a class="btn btn-primary" [routerLink]=""> Read More </a>
+            <h6 class="card-title mb-0 d-inline-block"> {{ item.title | shorten:35 }} </h6>
+            <div class="text-muted d-inline-block float-right">
+              <small> {{ item.date | date:'MMM' | uppercase }} {{ item.date | date:'dd'}} </small>
+            </div>
+            <p class="card-text mb-3"> {{ item.content | shorten:140 }} </p>
+            <a class="btn btn-primary" routerLink="/news-events"> Read More </a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="carousel-item">
-      <div class="col-md-3 col-sm-6" style="float:left" *ngFor="let item of successStories">
-        <div class="card shadow mb-2">
+      <div class="col-md-3 px-1" style="float:left" *ngFor="let item of successStories">
+        <div class="card shadow-sm mb-2">
            <img class="card-img-top mb-0" [src]="item.imgURL" [alt]="item.alt">
            <div class="card-body pt-1">
-             <h5 class="card-title mb-0 d-inline-block"> {{ item.title }} </h5>
-             <div class="text-muted d-inline-block float-right"><small> {{ item.date }} </small></div>
-             <p class="card-text mb-3"> {{ item.content }} </p>
-             <a class="btn btn-primary" [routerLink]="">Read More</a>
+             <h6 class="card-title mb-0 d-inline-block"> {{ item.title | shorten:35 }} </h6>
+             <div class="text-muted d-inline-block float-right">
+               <small> {{ item.date | date:'MMM' | uppercase }} {{ item.date | date:'dd' }} </small>
+              </div>
+             <p class="card-text mb-3"> {{ item.content | shorten:140  }} </p>
+             <a class="btn btn-primary" routerLink="/news-events">Read More</a>
            </div>
          </div>
        </div>

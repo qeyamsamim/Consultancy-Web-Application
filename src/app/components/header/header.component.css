@@ -1,9 +1,9 @@
-.primary {
+nav.primary {
   background: #425778;
   color: white;
 }
 
-.btn {
+button.btn {
   border-color: white;
   color: white;
 }

@@ -4,12 +4,12 @@
   color: #425778;
 }
 
-a, p, li {
+li {
   font-size: 13px;
 }
 
 @media only screen and (min-width: 600px){
-  a, p, li {
-    font-size: 15px;
+  li {
+    font-size: 14px;
   }
 }

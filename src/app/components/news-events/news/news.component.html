@@ -1,28 +1,36 @@
 <div *ngFor="let item of news; let i = index;">
-  <div class="card flex-md-row my-2 shadow-sm">
-    <img class="news-img rounded flex-auto d-md-none" [src]="item.imgURL">
-    <img class="news-img rounded flex-auto d-none d-md-block" [src]="item.imgURL" *ngIf="i % 2 != 0">
+  <div class="card flex-sm-row mb-2 shadow-sm">
+    <img class="news-img rounded flex-auto d-sm-none" [src]="item.imgURL" [alt]="item.alt">
+    <img class="news-img rounded flex-auto d-none d-sm-block" [src]="item.imgURL" [alt]="item.alt" *ngIf="i % 2 != 0">
     <div class="card-body align-items-start px-2 px-md-3 py-1 py-md-4">
-      <h5 class="mb-2"> {{ item.title }} </h5>
-      <div class="mb-2 text-muted date-text"> {{ item.date }} </div>
-      <p class="card-text my-text text-justify mb-0"> {{ item.content }} </p>
-      <a routerLink="" class="font-weight-bold">Continue Reading</a>
+      <h5 class="mb-2"> {{ item.title | shorten:30 }} </h5>
+      <div class="mb-2 text-muted"> {{ item.date | date:'longDate' }} </div>
+      <p class="card-text my-text text-justify  d-none d-md-block mb-0"> {{ item.content | shorten:830 }}
+        <a routerLink="" class="font-weight-bold">Continue Reading</a>
+      </p>
+      <p class="card-text my-text text-justify d-md-none mb-2"> {{ item.content | shorten:330 }}
+        <a routerLink="" class="font-weight-bold">Continue Reading</a>
+      </p>
     </div>
-    <img class="news-img rounded flex-auto d-none d-md-block" [src]="item.imgURL" *ngIf="i % 2 == 0">
+    <img class="news-img rounded flex-auto d-none d-sm-block" [src]="item.imgURL" [alt]="item.alt" *ngIf="i % 2 == 0">
   </div>
   <div class="d-md-none" *ngIf="i % 2 != 0">
-    <div class="row rounded mx-0 mb-1 d-flex flex-row bg-color" *ngFor="let j = index; let item of events.slice(i-1,i+1);">
-      <div class="col-3 my-auto">
-        <p class="card-text mt-0 mb-0 text-center"><small> {{ item.month }} </small></p>
-        <p class="card-text mt-0 mb-0 text-center font-weight-bold"> {{ item.day }} </p>
-        <p class="card-text mt-0 mb-0 text-center"><small> {{ item.year }} </small></p>
-      </div>
-      <div class="col-9">
-        <div class="mb-0 mt-2 text-white"><small> {{ item.type }} </small></div>
-        <p class="mb-0 event-title"> {{ item.title }} </p>
-        <p class="mb-0"> {{ item.category }} </p>
-        <p class="mb-0"> {{ item.time }} </p>
-        <p class="mb-3"><a class="text-white" [routerLink]="item.url"> {{ item.register }} </a></p>
+    <div class="row mx-0 mb-1 mb-sm-2 d-flex flex-row">
+      <div class="col-xs-12 col-sm-6" *ngFor="let j = index; let item of events.slice(i-1,i+1);">
+        <div class="row rounded mb-1 mb-sm-0 bg-color">
+          <div class="col-3 my-auto">
+          <p class="card-text mt-0 mb-0 text-center"><small> {{ item.date | date:'MMM' }} </small></p>
+          <p class="card-text mt-0 mb-0 text-center font-weight-bold"> {{ item.date | date:'d' }} </p>
+          <p class="card-text mt-0 mb-0 text-center"><small> {{ item.date | date:'yyyy' }} </small></p>
+        </div>
+        <div class="col-9">
+          <div class="mb-0 mt-2 text-white"><small> {{ item.type }} </small></div>
+          <p class="mb-0 event-title"> {{ item.title | shorten:29 }} </p>
+          <p class="mb-0"> {{ item.category }} </p>
+          <p class="mb-0"> {{ item.timeFrom | date:'shortTime' }} - {{ item.timeTo | date:'shortTime' }} </p>
+          <p class="mb-3"><a class="text-white" [routerLink]="item.link">Click Here to Register</a></p>
+        </div>
+        </div>
       </div>
     </div>
   </div>

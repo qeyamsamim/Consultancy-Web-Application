@@ -11,27 +11,32 @@ export class CounselingProcessComponent implements OnInit {
     {
       number: '1',
       title: 'Set an Appointment',
-      imgURL: '../../assets/icons/appointment.png'
+      imgURL: '../../assets/icons/appointment.png',
+      alt: 'appointment'
     },
     {
       number: '2',
       title: 'Identify Course, Country & University',
-      imgURL: '../../assets/icons/search.png'
+      imgURL: '../../assets/icons/search.png',
+      alt: 'identifyCourse'
     },
     {
       number: '3',
       title: 'International Test Preparation',
-      imgURL: '../../assets/icons/test.png'
+      imgURL: '../../assets/icons/test.png',
+      alt: 'testPrep'
     },
     {
       number: '4',
       title: 'Application Editing & Processing',
-      imgURL: '../../assets/icons/application.png'
+      imgURL: '../../assets/icons/application.png',
+      alt: 'application'
     },
     {
       number: '5',
       title: 'Visa & Pre-departure',
-      imgURL: '../../assets/icons/departure.png'
+      imgURL: '../../assets/icons/departure.png',
+      alt: 'visa'
     }
   ];
 

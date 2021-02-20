@@ -16,13 +16,9 @@ input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
-@media only screen and (min-width: 600px) {
-  input, textarea, select {
+@media only screen and (min-width: 768px) {
+  input, textarea, select, form .btn {
     font-size: 14px;
-  }
-
-  form .btn {
-    font-size: 16px;
   }
 
   form .btn-block {

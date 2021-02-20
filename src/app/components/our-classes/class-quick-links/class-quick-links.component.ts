@@ -5,7 +5,7 @@ import { QuickLinksService } from 'src/app/services/quick-links.service';
 @Component({
   selector: 'app-class-quick-links',
   templateUrl: './class-quick-links.component.html',
-  styleUrls: ['./class-quick-links.component.css']
+  styleUrls: ['./class-quick-links.component.css', '../../../app.component.css']
 })
 export class ClassQuickLinksComponent implements OnInit {
 

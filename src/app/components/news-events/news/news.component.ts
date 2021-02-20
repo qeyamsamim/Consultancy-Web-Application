@@ -8,8 +8,7 @@ import { EventsService } from '../../../services/events.service';
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css'],
-  providers: [NewsService, EventsService]
+  styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
 

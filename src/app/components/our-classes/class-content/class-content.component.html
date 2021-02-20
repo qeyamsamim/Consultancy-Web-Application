@@ -7,9 +7,9 @@
     <a class="nav-item nav-link px-0" id="nav-english-tab" data-toggle="tab" href="#nav-english" role="tab" aria-controls="nav-english" aria-selected="false">Academic English</a>
   </div>
 </nav>
-<div class="tab-content pt-1 pt-md-2 px-2 px-md-4" id="nav-tabContent">
+<div class="tab-content pt-1 pt-md-2 px-3 px-md-4" id="nav-tabContent">
   <div
-    class="tab-pane fade mt-2 show"
+    class="tab-pane fade pt-2 show"
     [id]="item.tabId"
     role="tabpanel"
     aria-labelledby="nav-toefl-tab"
@@ -17,7 +17,7 @@
     [ngClass]="{active: isFirst}">
       <h5 class="text-center pb-2"> {{ item.name }} </h5>
       <h6>Course Content</h6>
-      <p> {{ item.desc }} </p>
+      <p class="text-justify"> {{ item.desc }} </p>
       <h6>Topics Covered</h6>
       <ul>
         <li  *ngFor="let topic of item.topics;"> {{ topic }} </li>

@@ -1,21 +1,21 @@
 <div class="container-fluid">
-  <div class="row mb-2 pt-1 justify-content-center my-row ">
-    <div class="col-md-4 col-sm-12 px-5 py-4 my-auto">
+  <div class="row justify-content-center cl-row primary-cl">
+    <div class="col-xs-12 col-sm-5 col-md-4 px-5 px-sm-3 px-md-5 py-4 my-auto">
       <div class="row mb-1 d-flex flex-row bg-dark" *ngFor="let item of events; let i = index;">
         <div class="col-3 my-auto">
-          <p class="card-text mt-0 mb-0 text-center"><small> {{ item.month }} </small></p>
-          <p class="card-text mt-0 mb-0 text-center font-weight-bold"> {{ item.day }} </p>
-          <p class="card-text mt-0 mb-0 text-center"><small> {{ item.year }} </small></p>
+          <p class="card-text mt-0 mb-0 text-center"><small> {{ item.date | date:'MMM' }} </small></p>
+          <p class="card-text mt-0 mb-0 text-center font-weight-bold"> {{ item.date | date:'dd' }} </p>
+          <p class="card-text mt-0 mb-0 text-center"><small> {{ item.date | date:'yyyy' }} </small></p>
         </div>
         <div class="col-9">
           <div class="mb-0 mt-2 text-muted"><small> {{ item.type }} </small></div>
-          <p class="mb-0"> {{ item.title }} </p>
+          <p class="mb-0"> {{ item.title | shorten:28 }} </p>
           <p class="mb-0"> {{ item.category }} </p>
-          <p class="mb-3"><a [routerLink]="item.url">Click Here to Register</a></p>
+          <p class="mb-3"><a [routerLink]="item.link">Click Here to Register</a></p>
         </div>
       </div>
     </div>
-    <div class="col-md-7 col-sm-12 px-5 pb-2 my-auto">
+    <div class="col-xs-12 col-sm-6 col-md-7 px-5 px-sm-3 px-md-5 pb-2 my-auto">
       <h5 class="text-center">"Knowledge is very important. You can get quality knowledge from very prestigous universities throughout the world. Join us for a better future."</h5>
       <p class="float-right">By Someone</p>
     </div>

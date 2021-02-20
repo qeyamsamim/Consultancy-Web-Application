@@ -1,4 +1,4 @@
-.my-color {
+div.my-color {
   background: #425778;
   color: white;
 }
@@ -26,16 +26,11 @@ a > h5 {
 }
 
 p {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
   font-size: 13px;
   line-height: 18px;
-  max-height: 360px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   h6 {
     font-size: 24px;
   }
@@ -47,7 +42,6 @@ p {
   p {
     font-size: 16px;
     line-height: 25px;
-    max-height: 225px;
   }
 
   .lg-h6 {

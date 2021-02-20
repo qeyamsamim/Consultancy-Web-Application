@@ -1,4 +1,4 @@
-<form class="mx-0 mx-md-2 pt-4 pt-md-2 pb-2 pb-md-4" [formGroup]="messageForm" (submit)="onSubmit()">
+<form class="px-2 pt-4 pt-md-2 pb-2 pb-md-4" [formGroup]="messageForm" (submit)="onSubmit()">
   <h6 class="pb-3">Send us a Message!</h6>
   <div class="form-row my-2">
     <div class="col-md-6">
@@ -88,5 +88,6 @@
     </textarea>
     <span class="float-right text-muted"><small> {{ charCount.length }}/250</small></span>
   </div>
-  <button type="submit" class="btn btn-block" [disabled]="!messageForm.valid">Send Message</button>
+  <button type="submit" class="btn btn-block primary-cl" [disabled]="!messageForm.valid">Send Message</button>
 </form>
+<app-alert [message]="message" *ngIf="isClicked" (close)="onHandleClose()"></app-alert>

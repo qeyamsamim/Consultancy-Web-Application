@@ -1,38 +1,17 @@
-h6 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 170px;
-}
-
 p {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
   font-size: 13px;
   line-height: 17px;
-  max-height: 85px;
 }
 
-.card img {
-  height: 120px;
-  width: 160px;
+img.card-image {
+  max-height: 120px;
+  max-width: 160px;
   object-fit: cover;
 }
 
-
-@media only screen and (min-width: 600px) {
-  .card img {
-    height: 150px;
-    width: 200px;
-  }
-
-  p {
-    max-height: 102px;
-  }
-
-  h6 {
-  width: 150px;
+@media only screen and (min-width: 678px) {
+  img.card-image {
+    max-height: 150px;
+    max-width: 200px;
   }
 }

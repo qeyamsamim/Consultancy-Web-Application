@@ -1,28 +1,8 @@
-.card .card-header {
+div.card-header {
   background: #6880aa;
   color: white;
 }
 
-.card .card-text p {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  font-size: 13px;
-  line-height: 18px;
-  max-height: 90px;
-}
-
-.card .card-text a {
-  font-size: 13px;
+a {
   color: #425778;
-  text-decoration: none;
-}
-
-@media only screen and (min-width: 600px) {
-  .card .card-text p {
-    font-size: 14px;
-    line-height: 20px;
-    max-height: 100px;
-  }
 }

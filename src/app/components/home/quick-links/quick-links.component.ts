@@ -20,10 +20,10 @@ export class QuickLinksComponent implements OnInit {
   mainTitle = 'With more than 1000 advisee, we are one of the best advising center in Kabul, Afghanistan';
   consutancyGoal = 'This center was built in 2011 in Kabul, Afghanistan. Our aim is to provide assistance for top students to continue '+
   'their higher education. Additionally, it is the best place for students to come and study. This center was built in 2011 in Kabul, '+
-  'Afghanistan. Our aim is to provide assistance for top students to continue their higher education. Additionally, it is the best '+
+  'Afghanistan. We want to provide the best services for students to continue their higher education. Additionally, it is the best '+
   'place for students to come and study. This center was built in 2011 in Kabul, Afghanistan. Our aim is to provide assistance for '+
   'top students to continue their higher education. Additionally, it is the best place for students to come and study. This center was '+
-  'built in 2011 in Kabul, Afghanistan. Our aim is to provide assistance for top students to continue their higher education. '+
+  'built in 2011 in Kabul, Afghanistan. Our aim is to provide assistance for top students to continue their higher education. Come and '+
   'Additionally, it is the best place for students to come and study. This center was built in 2011 in Kabul, Afghanistan. Our aim '+
   'is to provide assistance for top students to continue their higher education. Additionally, it is the best place for students to '+
   'come and study.';

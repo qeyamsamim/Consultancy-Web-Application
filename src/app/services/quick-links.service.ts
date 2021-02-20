@@ -13,7 +13,7 @@ export class QuickLinksService {
       '5 Tips to a prepare a strong application',
       '',
       '',
-      '/services',
+      '/news-events',
       'home'
     ),
     new QuickLinks(

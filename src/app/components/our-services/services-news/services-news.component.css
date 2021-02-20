@@ -1,34 +1,16 @@
 .card .card-body p {
-  display: block;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
   font-size: 13px;
   line-height: 17px;
-  max-height: 51px;
 }
 
 .card .card-body a {
-  text-decoration: none;
   color: black;
   font-size: 13px;
+  text-decoration: none;
 }
 
 .card img {
   max-height: 140px;
   width: 100%;
   object-fit: cover;
-}
-
-.card .card-body .card-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 90%;
-}
-
-@media only screen and (min-width: 600px) {
-  .card .card-body .card-title {
-    max-width: 95%;
-  }
 }

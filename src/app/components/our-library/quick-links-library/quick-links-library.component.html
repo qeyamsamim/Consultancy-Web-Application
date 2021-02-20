@@ -1,10 +1,10 @@
-<div class="row mb-3 px-1 px-md-3 pt-3">
-  <div class="col-md-4 px-1" *ngFor="let item of libraryLinks.slice(0,3); let i = index;">
+<div class="row py-3 py-md-0 px-1 px-sm-5 px-md-3 pt-3 justify-content-center">
+  <div class="col-xs-12 col-sm-10 col-md-4 px-1" *ngFor="let item of libraryLinks.slice(0,3); let i = index;">
     <div class="card flex-row my-1 rounded shadow-sm">
       <img class="card-image rounded" [src]="item.imgURL" [alt]="item.alt">
       <div class="card-body align-items-start px-2 py-1 py-md-2">
-        <h6 class="card-title mb-1 mb-md-2"> {{ item.title }} </h6>
-        <p class="mb-1"> {{ item.content }} </p>
+        <h6 class="card-title mb-1 mb-md-2"> {{ item.title | shorten:13 }} </h6>
+        <p class="text-justify mb-1"> {{ item.content | shorten:120 }} </p>
       </div>
     </div>
   </div>
