@@ -1,0 +1,47 @@
+<h5 class="text-center py-2">Class Form</h5>
+<form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      formControlName="title"
+      placeholder="Title">
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="topics"
+      formControlName="topics"
+      placeholder="Topics">
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="schedule"
+      formControlName="schedule"
+      placeholder="Schedule">
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="instructor"
+      formControlName="instructor"
+      placeholder="Instructor">
+  </div>
+  <div class="form-group">
+    <textarea
+      class="form-control"
+      id="description"
+      formControlName="description"
+      placeholder="Description"
+      rows="8"></textarea>
+  </div>
+  <button
+    type="submit"
+    class="btn primary-cl"
+    [disabled]="!classForm.valid">Post</button>
+</form>

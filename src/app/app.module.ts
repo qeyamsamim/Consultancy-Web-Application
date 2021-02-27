@@ -41,10 +41,30 @@ import { ClassesService } from './services/classes.service';
 import { AdvisingFormService } from './services/advisong-form.service';
 import { UserMessageService } from './services/user-message.service';
 import { ShortenPipe } from './shared/shorten.pipe';
-import { FilterPipe } from './components/our-library/search-book/filter.pipe';
+import { FilterPipe } from './shared/filter.pipe';
 import { BooksService } from './services/books.service';
 import { AlertComponent } from './shared/components/alert/alert.component';
 import { EventsService } from './services/events.service';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
+import { FormComponent } from './components/admin/admin-shared/form/form.component';
+import { AdminNewsComponent } from './components/admin/admin-news/admin-news.component';
+import { AdminEventsComponent } from './components/admin/admin-events/admin-events.component';
+import { EventsFormComponent } from './components/admin/admin-events/events-form/events-form.component';
+import { NewsFormComponent } from './components/admin/admin-news/news-form/news-form.component';
+import { AdminBooksComponent } from './components/admin/admin-books/admin-books.component';
+import { BooksFormComponent } from './components/admin/admin-books/books-form/books-form.component';
+import { AdminQuickLinksComponent } from './components/admin/admin-quick-links/admin-quick-links.component';
+import { QuickLinksFormComponent } from './components/admin/admin-quick-links/quick-links-form/quick-links-form.component';
+import { SearchComponent } from './components/admin/search/search.component';
+import { DataListComponent } from './components/admin/admin-shared/data-list/data-list.component';
+import { UserMessagesComponent } from './components/admin/admin-shared/user-messages/user-messages.component';
+import { UserAdvisingFormComponent } from './components/admin/user-advising-form/user-advising-form.component';
+import { UserContactFormComponent } from './components/admin/user-contact-form/user-contact-form.component';
+import { AdminClassComponent } from './components/admin/admin-class/admin-class.component';
+import { ClassFormComponent } from './components/admin/admin-class/class-form/class-form.component';
+import { ClassDataComponent } from './components/admin/admin-class/class-data/class-data.component';
+import { EditDeleteComponent } from './components/admin/admin-shared/edit-delete/edit-delete.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +101,27 @@ import { EventsService } from './services/events.service';
     AboutQuickLinksComponent,
     ShortenPipe,
     FilterPipe,
-    AlertComponent
+    AlertComponent,
+    AdminComponent,
+    AdminHeaderComponent,
+    FormComponent,
+    AdminNewsComponent,
+    AdminEventsComponent,
+    EventsFormComponent,
+    NewsFormComponent,
+    AdminBooksComponent,
+    BooksFormComponent,
+    AdminQuickLinksComponent,
+    QuickLinksFormComponent,
+    SearchComponent,
+    DataListComponent,
+    UserMessagesComponent,
+    UserAdvisingFormComponent,
+    UserContactFormComponent,
+    AdminClassComponent,
+    ClassFormComponent,
+    ClassDataComponent,
+    EditDeleteComponent
   ],
   imports: [
     FormsModule,

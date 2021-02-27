@@ -1,0 +1,7 @@
+<form [formGroup]="quickLinksForm" (ngSubmit)="onSubmit()">
+  <app-form [reusableForm]="quickLinksForm.get('reusableForm')" [message]="message"></app-form>
+  <button
+    type="submit"
+    class="btn primary-cl"
+    [disabled]="!quickLinksForm.disabled">Post</button>
+</form>

@@ -1,7 +1,10 @@
+import { Subject } from 'rxjs';
 import { QuickLinks } from "../models/quick-links.model";
 
 export class QuickLinksService {
-  quickLinks: QuickLinks[] = [
+
+  quickLinksChanged = new Subject<QuickLinks[]>();
+  private quickLinks: QuickLinks[] = [
     new QuickLinks(
       'About Consultancy',
       '',
@@ -112,6 +115,10 @@ export class QuickLinksService {
     )
   ];
 
+  getQuickLink() {
+    return this.quickLinks.slice();
+  }
+
   getQuickLinks() {
     return this.quickLinks.filter((links) => links.category === 'home');
   }
@@ -122,5 +129,10 @@ export class QuickLinksService {
 
   getAboutQuickLinks() {
     return this.quickLinks.filter((links) => links.category === 'about');
+  }
+
+  addQuickLinks(quickLink: QuickLinks) {
+    this.quickLinks.push(quickLink);
+    this.quickLinksChanged.next(this.quickLinks.slice());
   }
 }

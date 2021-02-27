@@ -1,6 +1,8 @@
+import { Subject } from 'rxjs';
 import { Event } from '../models/event.model';
 
 export class EventsService {
+  eventChanged = new Subject<Event[]>();
   private events: Event[] = [
     new Event(
       'French Scholarship Information Session',
@@ -82,5 +84,10 @@ export class EventsService {
 
   getFeaturedEvents() {
     return this.events.filter((events, index) => index < 2);
+  }
+
+  addEvents(event: Event) {
+    this.events.push(event);
+    this.eventChanged.next(this.events.slice());
   }
 }

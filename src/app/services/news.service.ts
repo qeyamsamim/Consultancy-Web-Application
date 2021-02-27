@@ -1,7 +1,9 @@
+import { Subject } from 'rxjs';
 import { News } from '../models/news.model';
 
 export class NewsService {
 
+  newsChanged = new Subject<News[]>();
   private news: News[] = [
     new News(
       'New Classes Beign Offered',
@@ -244,6 +246,11 @@ export class NewsService {
 
   getServiceNews() {
     return this.news.filter((news) => news.category === 'classes' || news.category === 'library');
+  }
+
+  addNews(news: News) {
+    this.news.push(news);
+    this.newsChanged.next(this.news.slice());
   }
 
   constructor() { }

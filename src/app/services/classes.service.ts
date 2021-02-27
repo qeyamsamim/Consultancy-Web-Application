@@ -1,7 +1,9 @@
+import { Subject } from 'rxjs';
 import { OurClass } from "../models/class.model";
 
 export class ClassesService {
 
+  classesChanged = new Subject<OurClass[]>();
   private classes: OurClass[] = [
     new OurClass(
       'TOEFL iBT Preparation Class',
@@ -78,4 +80,8 @@ export class ClassesService {
     return this.classes.slice();
   }
 
+  addClass(ourClass: OurClass) {
+    this.classes.push(ourClass);
+    this.classesChanged.next(this.classes.slice());
+  }
 }

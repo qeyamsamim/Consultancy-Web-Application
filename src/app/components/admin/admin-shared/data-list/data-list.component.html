@@ -1,0 +1,22 @@
+<div class="py-1">
+  <div class="card flex-sm-row shadow-sm">
+    <img class="flex-auto" [src]="data.imgURL">
+    <div class="card-body py-2 px-2 px-md-3">
+      <h6 class="d-inline-block"> {{ data.title }} </h6>
+      <app-edit-delete></app-edit-delete>
+      <small class="text-muted d-block pb-2"> {{ data.date | date:'longDate'}} </small>
+      <p class="mb-0" *ngIf="data.content"> {{ data.content | shorten:500 }} </p>
+      <!-- <p *ngIf="data.date" class="mb-1"><span class="font-weight-bold">Date: </span> {{ data.date }} </p> -->
+      <div *ngIf="data.type" class="my-auto">
+        <p *ngIf="data.type" class="mb-1"><span class="font-weight-bold">Type: </span> {{ data.type }} </p>
+        <p *ngIf="data.timeFrom && data.timeTo" class="mb-1"><span class="font-weight-bold">Time: </span> {{ data.timeFrom | date:'shortTime' }} - {{ data.timeTo | date:'shortTime' }} </p>
+        <p *ngIf="data.address" class="mb-1"><span class="font-weight-bold">Address: </span> {{ data.address }} </p>
+      </div>
+      <div *ngIf="data.name" class="my-auto">
+        <p *ngIf="data.name" class="mb-1"><span class="font-weight-bold">Name: </span> {{ data.name }} </p>
+        <p *ngIf="data.edition" class="mb-1"><span class="font-weight-bold">Edition: </span> {{ data.edition }} </p>
+        <p *ngIf="data.number" class="mb-1"><span class="font-weight-bold">Number: </span> {{ data.number }} </p>
+      </div>
+    </div>
+  </div>
+</div>

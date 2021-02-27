@@ -1,0 +1,49 @@
+<h5 class="text-center py-2">Post a New Book Here!</h5>
+<form [formGroup]="booksForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      formControlName="name"
+      placeholder="Name">
+  </div>
+  <div class="form-row pb-3">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        id="edition"
+        formControlName="edition"
+        placeholder="Edition">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        id="number"
+        formControlName="number"
+        placeholder="Number">
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="imgURL"
+      formControlName="imgURL"
+      placeholder="Image URL">
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="alt"
+      formControlName="alt"
+      placeholder="Alt">
+  </div>
+  <button
+    type="submit"
+    class="btn primary-cl"
+    [disabled]="!booksForm.valid">Post</button>
+</form>

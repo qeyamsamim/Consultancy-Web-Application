@@ -1,0 +1,41 @@
+<form [formGroup]="eventsForm" (ngSubmit)="onSubmit()">
+  <app-form [reusableForm]="eventsForm.get('reusableForm')" [message]="message"></app-form>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="type"
+      formControlName="type"
+      placeholder="Type">
+  </div>
+  <div class="form-row pb-3">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        id="timeFrom"
+        formControlName="timeFrom"
+        placeholder="From">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        id="timeTo"
+        formControlName="timeTo"
+        placeholder="To">
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="address"
+      formControlName="address"
+      placeholder="Address">
+  </div>
+  <button
+    type="submit"
+    class="btn primary-cl"
+    [disabled]="!eventsForm.valid">Post</button>
+</form>

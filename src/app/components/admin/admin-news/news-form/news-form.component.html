@@ -1,0 +1,7 @@
+<form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+  <app-form [reusableForm]="newsForm.get('reusableForm')" [message]="message"></app-form>
+  <button
+    type="submit"
+    class="btn primary-cl"
+    [disabled]="!newsForm.valid">Post</button>
+</form>

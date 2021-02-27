@@ -1,6 +1,8 @@
+import { Subject } from 'rxjs';
 import { Book } from '../models/book.model';
 
 export class BooksService {
+  booksChanged = new Subject<Book[]>();
   private books: Book[] = [
     new Book(
       'Barrons TOEFL iBT',
@@ -41,6 +43,11 @@ export class BooksService {
 
   getBooks() {
     return this.books.slice();
+  }
+
+  addBooks(book: Book) {
+    this.books.push(book);
+    this.booksChanged.next(this.books.slice());
   }
 
 }

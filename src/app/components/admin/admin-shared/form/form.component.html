@@ -1,0 +1,43 @@
+<h6 class="text-center py-2">Post a New {{ message }} Here!</h6>
+<div [formGroup]="reusableForm">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      formControlName="title"
+      placeholder="Title">
+  </div>
+  <div class="form-group">
+    <textarea
+      class="form-control"
+      id="description"
+      formControlName="description"
+      placeholder="Description"
+      rows="7"></textarea>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="imgURL"
+      formControlName="imgURL"
+      placeholder="Image URL">
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      id="url"
+      formControlName="url"
+      placeholder="URL">
+  </div>
+  <div class="form-group">
+    <select
+      class="form-control"
+      id="studyLevel"
+      formControlName="tag">
+        <option *ngFor="let item of tags; let i = index;" [value]="item"> {{ item }} </option>
+    </select>
+  </div>
+</div>
